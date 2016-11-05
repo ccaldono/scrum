@@ -1,0 +1,11 @@
+<div class="content">
+    <?php echo View::content(); ?>
+    <h3>Proyectos</h3>
+    <ul>
+        <?php foreach ($listProyectos->items as $item) : ?>
+        <li>  
+            <strong><?php echo $item->nombre ?></strong>
+         </li>
+        <?php endforeach; ?>
+    </ul>
+</div>

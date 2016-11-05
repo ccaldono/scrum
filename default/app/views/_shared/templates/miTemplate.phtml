@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Scrum Manager</title>
+
+    <!-- Bootstrap Core CSS -->
+    <?php Tag::css('template/bootstrap.min') ?>
+    <!--<link href="css/bootstrap.min.css" rel="stylesheet">-->
+
+    <!-- Custom CSS -->
+    <!--<link href="css/sb-admin.css" rel="stylesheet">-->
+    <?php Tag::css('template/sb-admin') ?>
+
+    <!-- Morris Charts CSS -->
+    <!--<link href="css/plugins/morris.css" rel="stylesheet">-->
+    <?php Tag::css('template/plugins/morris') ?>
+    
+
+    <!-- Custom Fonts -->
+    <!--<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">-->
+    <?php Tag::css('template/font-awesome/css/font-awesome.min') ?>
+    <?php echo Html::includeCss() ?>
+     
+     <?php echo Tag::js('template/jquery') ?>
+
+    <!-- Bootstrap Core JavaScript -->
+    
+     <?php echo Tag::js('template/bootstrap.min') ?>
+
+    <!-- Morris Charts JavaScript -->
+   
+    <?php echo Tag::js('template/plugins/morris/raphael.min') ?>
+    
+   
+     <?php echo Tag::js('template/plugins/morris/morris.min') ?>
+    
+   
+    <?php echo Tag::js('template/plugins/morris/morris-data') ?>
+
+
+</head>
+<body>
+
+    <div id="wrapper">
+       <?php View::partial('template/sidebar') ?>
+        <div id="page-wrapper"> 
+            <?php View::partial('template/intro',FALSE,array('titulo'=>$titulo,'subtitulo'=>$subtitulo)) ?>
+            <?php View::content() ?>
+        </div>
+    </div>
+</body>

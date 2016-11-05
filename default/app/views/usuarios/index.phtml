@@ -1,0 +1,16 @@
+<div class="content">
+    <?php echo View::content(); ?>
+    <h3>Usuarios</h3>
+    <ul>
+    <?php foreach ($listUsuarios->items as $item) : ?>
+    <li>
+        
+        <strong><?php echo $item->nombre ?> - <?php echo $item->apellido ?></strong>
+    </li>
+    <?php endforeach; ?>
+    </ul>
+ 
+   
+</div>
+
+

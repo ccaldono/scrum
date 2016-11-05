@@ -1,0 +1,50 @@
+
+<div class="content">
+<?php View::content(); ?>
+
+ 
+<?php echo Form::open(); // por defecto llama a la misma url ?>
+  
+    <table>
+    <tr>
+        <td><strong>Nombre *:</strong> <br><br></td>
+        <td> <?php echo Form::text('usuario.nombre') ?> <br><br></td>
+       
+    </tr>
+   
+    <tr>
+        <td><strong>Apellido *:</strong><br><br></td>
+        <td><?php echo Form::text('usuario.apellido') ?><br><br></td>
+          
+    </tr> 
+  
+     
+    <tr>
+        <td><strong>Correo *:</strong><br><br></td>
+        <td><?php echo Form::text('usuario.correo') ?><br><br></td>
+    </tr>
+   
+     <tr>
+        <td><strong>Contraseña *:</strong><br><br></td>
+        <td><?php echo Form::pass('usuario.contrasena') ?><br><br></td>
+       
+        
+   
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+        <td> <?php echo Form::submit('Registrar') ?></td>
+        <td> <input type="reset" value="Cancelar" onclick="location='../'" /></td>
+       
+    </tr>
+   <tr>
+        <td>&nbsp;</td>
+       
+       
+    </tr>
+</table>
+      
+<?php echo Form::close() ?>
+    
+    
+</div>
