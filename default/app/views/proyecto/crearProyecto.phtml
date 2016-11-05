@@ -5,6 +5,7 @@
 <?php echo Form::open(); // por defecto llama a la misma url ?>
         
 <table>
+    prueba github
     <tr>
         <td>Nombre proyecto *: </td>
         <td><?php echo Form::text('proyecto.nombre') ?></td>
@@ -22,10 +23,10 @@
         <td> <?php echo Form::date('proyecto.fechaFin') ?></td>
     </tr>
    
-<!--    <tr>
+    <tr>
         <td>Estado *:</td>
-        <td> <input type="text" name="proyecto[estado]"  value=Abierto> </td>
-    </tr>-->
+        <td><?php echo Form::text('proyecto.estado') ?></td>
+    </tr>
    
     
         
