@@ -8,6 +8,11 @@ class UsuariosController extends AppController{
         $usuario= new Usuarios();
         $this->listUsuarios=$usuario->getUsuarios($page);
     }
+    public function saludo(){
+        $this->titulo ='Acerca de:';
+        $this->subtitulo ='SCRUMSY';
+        
+    }
     public function registrarUsuario(){
         View::template('registro');
         $this->titulo ='Nuevo usuario:';

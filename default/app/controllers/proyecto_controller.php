@@ -27,7 +27,7 @@ class ProyectoController extends AppController{
             $proyecto = new Proyecto(Input::Post('proyecto'));
             //En caso que falle la operación de guardar
             if(!$proyecto->save()){
-                Flash::error('Falló Operación');
+                Flash::error('Falló Operación');               
                 //se hacen persistente los datos en el formulario
                 $this->proyecto = Input::Post('proyecto');
                 /**
@@ -40,7 +40,7 @@ class ProyectoController extends AppController{
         }
     }
     
-    public function edit($id = null)
+    public function edit($id)
     {
     	$proyecto = new Proyecto();
         if($id != null){

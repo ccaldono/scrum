@@ -1,2 +1,32 @@
-<h1>Ingresa tus datos</h1>
+<div>
+    <?php View::content(); ?>
+    <?php echo Form::open();?>
+  <div ><h3>Inicio de Sesion</h3>      
+  </div>
+    <div><em>Los campos con * son obligatorios</em></div>
+    
+  <div>
+    <div><label for="correo">Correo*:</label></div>
+    <div><?php echo Form::text("correo"); ?></div>
+  </div>
+  <div>
+    <div><label for="contrasena">Contraseña*:</label></div>
+    <div ><?php echo Form::pass("contrasena"); ?></div>
+  </div>
+  <div>
+       <ul> <?php echo Form::submit("Ingresar","class: boton"); ?></ul>
+  </div>
+  <div>
+      <a href="#" >¿Olvidó su contraseña?</a>
+  </div>
+             
+        <div>
+            <ul class="actions">
+                <input type="reset" value="¡Registrarme!" onclick="location='usuarios/registrarUsuario'" />
+            </ul>
+        </div>
+  
+  <?php echo Form::close(); ?></p>
+                       
+</div>
 
