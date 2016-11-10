@@ -2,6 +2,8 @@
 
 class Usuarios extends ActiveRecord{
     
+    
+    
     public function getUsuarios($page, $ppage=20)
     {
         return $this->paginate("page: $page","per_page: $ppage");
@@ -15,8 +17,10 @@ class Usuarios extends ActiveRecord{
          $this->validates_presence_of("correo");
          $this->validates_uniqueness_of("correo");
          $this->validates_presence_of("contrasena");
-         $this->validates_length_of("contrasena", 16,6);
+         //$this->validates_length_of("contrasena", 16,6);
+         
          
     }
+    	
   }
 
