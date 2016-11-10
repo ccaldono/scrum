@@ -40,23 +40,23 @@ class ProyectoController extends AppController{
         }
     }
     
-    public function edit($id)
+  public function edit($id)
     {
-    	$proyecto = new Proyecto();
-        if($id != null){
-    	    //Aplicando la autocarga de objeto, para comenzar la edición
-            $this->menus = $proyecto->find((int)$id);
-    	}
-        //se verifica si se ha enviado el formulario (submit)
-        if($this->has_post('menus')){
+        $proyecto = new proyecto();
  
-            if(!$Proyecto->update($this->post('menus'))){
-                Flash::error('Falló Operación');
-                //se hacen persistente los datos en el formulario
-                $this->menus = $this->post('menus');
+        //se verifica si se ha enviado el formulario (submit)
+        if(Input::hasPost('proyecto')){
+ 
+            if($proyecto->update(Input::post('proyecto'))){
+                 Flash::valid('Operación exitosa');
+                //enrutando por defecto al index del controller
+                return Redirect::to();
             } else {
-                Router::route_to('action: index');
+                Flash::error('Falló Operación');
             }
+        } else {
+            //Aplicando la autocarga de objeto, para comenzar la edición
+            $this->proyecto = $proyecto->find_by_id((int)$id);
         }
     }
     
