@@ -23,10 +23,13 @@ class UsuariosController extends AppController{
              * y los asocia al campo correspondiente siempre y cuando se utilice la convención
              * model.campo
              */
-            $usuario = new Usuarios(Input::Post('usuario'));
-            
-           
-            //En caso que falle la operación de guardar
+            $temporal=  Input::Post('usuario');
+             $cadena2="contrasena";
+             $contraTemporal=$temporal['contrasena'];
+             $contraTemporal=sha1($contraTemporal); 
+             $temporal['contrasena']=$contraTemporal;
+             $usuario = new Usuarios($temporal);
+             
             if(!$usuario ->save()){
                 Flash::error('Falló Operación');
                 //se hacen persistente los datos en el formulario
@@ -37,10 +40,9 @@ class UsuariosController extends AppController{
                  */
             }else{
                 Flash::success('Operación exitosa');
-               Router::redirect("saludo");
-                
-                     
-            }
+               
+                Router::redirect("saludo");
+               }
         }
     }
     

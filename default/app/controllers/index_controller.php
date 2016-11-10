@@ -23,13 +23,15 @@ class IndexController extends AppController
         if (Input::hasPost("correo","contrasena")){
             $pwd = Input::post("contrasena");
             $correo=Input::post("correo");
+            $pwd=  sha1($pwd);
+            $contra=substr($pwd, 0, -30);
  
-            $auth = new Auth("model", "class: usuarios", "correo: $correo", "contrasena: $pwd");
+            $auth = new Auth("model", "class: usuarios", "correo: $correo", "contrasena: $contra");
             if ($auth->authenticate()) {
                 Router::redirect("usuarios/index");
             } else {
                 Flash::error("Usuario no disponible en la base de datos");
-               
+                 echo $contra;
             }
         }
     
