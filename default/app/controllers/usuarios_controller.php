@@ -26,8 +26,16 @@ class UsuariosController extends AppController{
             $temporal=  Input::Post('usuario');
              $cadena2="contrasena";
              $contraTemporal=$temporal['contrasena'];
+             $longitudContra=  strlen($contraTemporal);
+             if($longitudContra<6 or $longitudContra >16 ){             
+              Flash::error('La contraseña debe tener minimo 6 caracteres, maximo 16');
+                //se hacen persistente los datos en el formulario
+                $this->usuarios = Input::Post('usuario');             
+             }
+             else{
              $contraTemporal=sha1($contraTemporal); 
              $temporal['contrasena']=$contraTemporal;
+             
              $usuario = new Usuarios($temporal);
              
             if(!$usuario ->save()){
@@ -39,10 +47,10 @@ class UsuariosController extends AppController{
                  * igual como esta el model de la vista, en este caso el model es "menus" y quedaria $this->menus
                  */
             }else{
-                Flash::success('Operación exitosa');
-               
+                Flash::success('Operación exitosa');               
                 Router::redirect("saludo");
                }
+        }
         }
     }
     

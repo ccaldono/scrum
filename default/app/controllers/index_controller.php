@@ -24,9 +24,7 @@ class IndexController extends AppController
             $pwd = Input::post("contrasena");
             $correo=Input::post("correo");
             $pwd=  sha1($pwd);
-            $contra=substr($pwd, 0, -30);
- 
-            $auth = new Auth("model", "class: usuarios", "correo: $correo", "contrasena: $contra");
+            $auth = new Auth("model", "class: usuarios", "correo: $correo", "contrasena: $pwd");
             if ($auth->authenticate()) {
                 Router::redirect("usuarios/index");
             } else {
