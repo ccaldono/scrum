@@ -1,0 +1,247 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Inicio</title>
+		
+                <?php echo Tag::css('inicio-template/bootstrap') ?>
+    
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		
+                <?php echo Tag::js('inicio-template/jquery.min') ?>
+		 <!-- Custom Theme files -->
+                <?php echo Tag::css('inicio-template/style') ?>
+		
+   		 <!-- Custom Theme files -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+                
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+		</script>
+		<!---- animated-css ---->
+		
+                 <?php echo Tag::css('inicio-template/animate') ?>
+                <?php echo Tag::js('inicio-template/wow.min') ?>
+		
+		<script>
+		 new WOW().init();
+		</script>
+		<!---- animated-css ---->
+		<!---- start-smoth-scrolling---->
+		
+                 <?php echo Tag::js('inicio-template/move-top') ?>
+                 <?php echo Tag::js('inicio-template/easing') ?>
+		
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+		</script>
+                 <?php echo Html::includeCss() ?>
+		 <!---- start-smoth-scrolling---->
+		<!----webfonts--->
+		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+		<!---//webfonts--->
+               
+	</head>
+	<body>
+		<!---- container ---->
+			<!---- header ---->
+			<div class="header">
+				<div class="container">
+				<!--- beanner-info---->
+				<div class="banner-info text-center wow fadeIn" data-wow-delay="0.5s">
+					<!--<h1>Scrumsy</h1>-->
+					  
+					 <p></p></br></br></br></br></br>
+					
+					<a class="big-btn wow shake" data-wow-delay="0.3s" href="#">Registrar</a>
+				</div>
+				<!--- beanner-info---->
+				<!---- video ---->
+				<!---pop-up-box---->
+					 
+                                        <?php echo Tag::js('inicio-template/modernizr.custom.min') ?>
+                                        <?php echo Tag::css('inicio-template/popuo-box') ?>
+                                        <?php echo Tag::js('inicio-template/jquery.magnific-popup') ?>
+					<!---//pop-up-box---->
+				
+				
+				 <script>
+						$(document).ready(function() {
+						$('.popup-with-zoom-anim').magnificPopup({
+							type: 'inline',
+							fixedContentPos: false,
+							fixedBgPos: true,
+							overflowY: 'auto',
+							closeBtnInside: true,
+							preloader: false,
+							midClick: true,
+							removalDelay: 300,
+							mainClass: 'my-mfp-zoom-in'
+						});
+																						
+						});
+				</script>								  
+				</div>
+			<!----//fea-video---->
+			</div>
+			</div>
+			<!---- header ---->
+			<!---- content ---->
+			<div class="content">
+				<!--<div class="top-grids">
+						<div class="col-md-7 top-left-grid wow fadeInLeft" data-wow-delay="0.4s">
+							<h3>See the sky even better than your own eyes can </h3>
+							<p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+							<p>Auae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+							<a class="download-btn wow shake" data-wow-delay="0.3s" href="#">Download Now</a>
+						</div>
+						<div class="col-md-5 top-right-grid wow fadeInRight" data-wow-delay="0.4s">
+							
+						</div>
+						<div class="clearfix"> </div>
+				</div>-->
+				
+				<!---- testmonials ---->
+				<div class="test-monials">
+				<!----sreen-gallery-cursual---->
+						<div class="sreen-gallery-cursual">
+							 <!-- requried-jsfiles-for owl -->
+                                                        <?php echo Tag::css('inicio-template/owl.carousel') ?>
+                                                        <?php echo Tag::js('inicio-template/owl.carousel') ?>
+						
+							        <script>
+							    $(document).ready(function() {
+							      $("#owl-demo").owlCarousel({
+							        items : 1,
+							        lazyLoad : true,
+							        autoPlay : true,
+							        navigation : false,
+							        navigationText :  false,
+							        pagination : true,
+							      });
+							    });
+							    </script>
+							 <!-- //requried-jsfiles-for owl -->
+							 <!-- start content_slider -->
+						       <div id="owl-demo" class="owl-carousel">
+					                <div class="item">
+					                	<div class="test-monial-grid wow bounceIn" data-wow-delay="0.4s">
+						                	
+                                                                        <?php echo Html::img('images/ricardo.png') ?>
+						                	<p>Omar Ricardo Bonilla</p>
+											<p>Desarrollador</p>
+					                	</div>
+					                </div>
+					                <div class="item">
+					                	<div class="test-monial-grid wow bounceIn" data-wow-delay="0.4s">
+                                                                         <?php echo Html::img('images/claudia.png') ?>
+						                	<p>Claudia Yicel Caldon</p>
+											<p>Desarrolladora</p>
+					                	</div>
+					                </div>
+					                <div class="item">
+					                	<div class="test-monial-grid wow bounceIn" data-wow-delay="0.4s">
+						                
+                                                                         <?php echo Html::img('images/juan.png') ?>
+						                	<p>Juan Manuel Muñoz</p>
+											<p>Desarrollador</p>
+					                	</div>
+					                </div>
+					                <div classn="item">
+					                	<div class="test-monial-grid wow bounceIn" data-wow-delay="0.4s">
+						                	
+                                                                         <?php echo Html::img('images/keila.png') ?>
+						                	<p>Keila Paz Valencia</p>
+											<p>Desarrolladora</p>
+					                	</div>
+					                </div>
+					                <div class="item">
+					                	<div class="test-monial-grid wow bounceIn" data-wow-delay="0.4s">
+						                	
+                                                                         <?php echo Html::img('images/arley.png') ?>
+						                	<p>Arley Perafan Buitron</p>
+											<p>Desarrollador</p>
+					                	</div>
+					                </div>
+					                <div class="item">
+					                	<div class="test-monial-grid wow bounceIn" data-wow-delay="0.4s">
+				
+                                                                         <?php echo Html::img('images/william.png') ?>
+						                	<p>William Fernando Romero</p>
+								        <p>Desarrollador</p>
+					                	</div>
+					                </div>
+				              </div>
+						<!--//sreen-gallery-cursual---->
+				</div>
+				</div>
+				<!---- testmonials ---->
+				<!---- content-bottom-grids ----->
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				<div class="content-bottom-grids">
+					<div class="container">
+						
+						<div>
+						<h1><strong>Scrumsy</strong></h1>
+						<p><strong>Esta aplicación ofrece múltiples  funcionalidades, dirigidas hacia el desarrollo de proyectos, utilizando "Scrum" como metodología para la comunicación e interacción del equipo. Dentro de la aplicación se podrá navegar de forma amigable, ya que provee interfaces intuitivas y de alto nivel, también provee creación de artefactos propios de la metodología "Scrum" tales como el Backlog de producto, el Backlog de Sprint y Scrum Taskboar y el incremento de funcionalidad.</strong></p>
+						</div>
+						<div class="clearfix"> </div>
+						
+					</div>
+				</div>
+				
+				
+				
+				
+				
+				
+				
+			
+				<!----- latest-news ---->
+			</div>
+			<!---- content ---->
+			<!--- footer ---->
+			
+					
+				
+					
+					<!---- footer-logo ---->
+					<div class="footer text-center">
+					
+					 <p>Universidad del Cauca</P>
+					 <p>Facultad de Ingeniería Electrónica y Telecomunicaciones - FIET</p>
+					 <p>Programa de ingeniería de sistemas</p>
+                     <p>Popayán - Cauca</p>
+					 <p>2016</p>
+					 
+						
+					<p>Design by <a href="#">www.W3layouts.com</a></p>
+					<div class="clearfix"> </div>
+						
+									
+					</div>
+					<!---- footer-logo ---->
+		
+		<!---- container ---->
+	</body>
+</html>
