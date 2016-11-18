@@ -7,15 +7,9 @@
 class IndexController extends AppController
 {
 
-    public function indexito()
-    {
-        View::template('index');
-    	$this->titulo ='Inicia sesion';
-        $this->subtitulo ='';
-    }
-    
     public function index()
-	{
+    {
+        Auth::destroy_identity();
         View::template('index');
         $this->titulo ='Login:';
         $this->subtitulo ='';
@@ -33,5 +27,5 @@ class IndexController extends AppController
             }
         }
     
-        }
+    }
 }

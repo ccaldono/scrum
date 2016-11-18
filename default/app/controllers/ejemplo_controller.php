@@ -10,8 +10,16 @@ class EjemploController extends AppController
 
     public function index()
     {
-        View::template('index');
-    	$this->titulo ='Inicia sesion';
-        $this->subtitulo ='necesitamos tu nickname y contraseña';
+        if(Auth::is_valid()){
+            View::template('index');
+            $this->titulo ='Inicia sesion';
+            $this->subtitulo ='necesitamos tu nickname y contraseña';
+        }else{
+            //Redirect::to('../scrum/index');
+            echo "<br/><h1>" . "ERROR! no has iniciado sesión." . "</h1>";
+            echo "Solo usuarios registrados pueden acceder a esta página." . "<br/>";
+            echo "<br/><h2>" . "<a href='index'>Iniciar sesión</a>"."</h2>";
+            exit;
+        }
     }
 }
