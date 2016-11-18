@@ -3,17 +3,35 @@
 Load:: models('usuarios');
 class UsuariosController extends AppController{
     public function index($page=1){
-        $this->titulo ='Acerca de:';
-        $this->subtitulo ='SCRUMSY';
-        $usuario= new Usuarios();
-        $this->listUsuarios=$usuario->getUsuarios($page);
+        if(Auth::is_valid()){
+            $this->titulo ='Acerca de:';
+            $this->subtitulo ='SCRUMSY';
+            $usuario= new Usuarios();
+            $this->listUsuarios=$usuario->getUsuarios($page);
+        }else{
+            //Redirect::to('../scrum/index');
+            echo "<br/><h1>" . "ERROR! no has iniciado sesión." . "</h1>";
+            echo "Solo usuarios registrados pueden acceder a esta página." . "<br/>";
+            echo "<br/><h2>" . "<a href='index'>Iniciar sesión</a>"."</h2>";
+            exit;
+        }
     }
+    
     public function saludo(){
-        $this->titulo ='Acerca de:';
-        $this->subtitulo ='SCRUMSY';
-        
+        if(Auth::is_valid()){
+            $this->titulo ='Acerca de:';
+            $this->subtitulo ='SCRUMSY';
+        }else{
+            //Redirect::to('../scrum/index');
+            echo "<br/><h1>" . "ERROR! no has iniciado sesión." . "</h1>";
+            echo "Solo usuarios registrados pueden acceder a esta página." . "<br/>";
+            echo "<br/><h2>" . "<a href='index'>Iniciar sesión</a>"."</h2>";
+            exit;
+        }        
     }
+    
     public function registrarUsuario(){
+        Auth::destroy_identity();
         View::template('registro');
         $this->titulo ='Nuevo usuario:';
         $this->subtitulo ='';
