@@ -9,7 +9,7 @@ class SaludoController extends AppController {
             //Redirect::to('../scrum/index');
             echo "<br/><h1>" . "ERROR! no has iniciado sesión." . "</h1>";
             echo "Solo usuarios registrados pueden acceder a esta página." . "<br/>";
-            echo "<br/><h2>" . "<a href='index'>Iniciar sesión</a>"."</h2>";
+            echo "<br/><h2>" . "<a href='../index'>Iniciar sesión</a>"."</h2>";
             exit;
         }
     }
