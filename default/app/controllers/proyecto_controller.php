@@ -6,12 +6,12 @@ class ProyectoController extends AppController{
     
     public function index($page=1) 
     {
-        $this->titulo ='Acerca de:';
-        $this->subtitulo ='SCRUMSY';
+        $this->titulo ='Mis proyectos:';
+        $this->subtitulo ='.i.';
         $proyecto = new Proyecto();
         $this->listProyectos = $proyecto->getProyectos($page);
     }
- 
+     
     /**
      * Crea un Registro
      */
@@ -42,8 +42,11 @@ class ProyectoController extends AppController{
     
   public function edit($id)
     {
+        $this->titulo ='Editando el proyecto:';
+        //$this->proyecto = $proyecto->find_by_id((int)$id);
+       
         $proyecto = new proyecto();
- 
+        
         //se verifica si se ha enviado el formulario (submit)
         if(Input::hasPost('proyecto')){
  
@@ -57,6 +60,7 @@ class ProyectoController extends AppController{
         } else {
             //Aplicando la autocarga de objeto, para comenzar la edición
             $this->proyecto = $proyecto->find_by_id((int)$id);
+             $this->subtitulo =$this->proyecto->nombre;
         }
     }
     

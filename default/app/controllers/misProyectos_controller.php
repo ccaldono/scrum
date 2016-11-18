@@ -10,6 +10,14 @@ class MisProyectosController extends AppController {
         $proyecto= new Proyecto();
         $this->listProyectos=$proyecto->getProyectos($page);
     }
+    public function mostar($id){
+   	 // Selecciona el template 'mi_template.phtml'
+   	 
+    	$this->titulo ='Mis proyectos:';
+        $this->subtitulo ='';
+        $proyecto= new Proyecto();
+        $this->listProyectos=$proyecto->getProyectos($page);
+    }
     public function edit($id)
     {
         $proyecto = new proyecto();

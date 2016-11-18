@@ -26,7 +26,7 @@ class IndexController extends AppController
             $pwd=  sha1($pwd);
             $auth = new Auth("model", "class: usuarios", "correo: $correo", "contrasena: $pwd");
             if ($auth->authenticate()) {
-                Router::redirect("usuarios/index");
+                Router::redirect("proyecto/index");
             } else {
                 Flash::error("Usuario no disponible en la base de datos");
                  echo $contra;
