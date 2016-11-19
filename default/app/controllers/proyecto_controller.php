@@ -78,14 +78,16 @@ class ProyectoController extends AppController{
                 }
             } else {
                 //Aplicando la autocarga de objeto, para comenzar la edición
-                $this->proyecto = $proyecto->find_by_id((int)$id);
+                 $this->proyecto = $proyecto->find_by_id((int)$id);
+                 $this->subtitulo =$this->proyecto->nombre;
             }
+
 
         }else{
             //Aplicando la autocarga de objeto, para comenzar la edición
             $this->proyecto = $proyecto->find_by_id((int)$id);
              $this->subtitulo =$this->proyecto->nombre;
-            //Redirect::to('../scrum/index');
+             //Redirect::to('../scrum/index');
             echo "<br/><h1>" . "ERROR! no has iniciado sesión." . "</h1>";
             echo "Solo usuarios registrados pueden acceder a esta página." . "<br/>";
             echo "<br/><h2>" . "<a href='../index'>Iniciar sesión</a>"."</h2>";
