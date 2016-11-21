@@ -28,12 +28,12 @@ body a{
 .banner-info h1{
 	font-size: 3.8em;
 	font-weight: 300;
-	color: #FFF;
+	color: #AB3535;
 	margin: 0em 0 0.4em;
 	padding: 0;
 }
 .banner-info p{
-	color: #FFF;
+	color: #000;
 	font-weight: 300;
 	font-style: italic;
 	font-size: 1.2em;
@@ -240,7 +240,7 @@ a.try-demo:hover{
 }
 /*---- footer ----*/
 .footer{
-	background: #1E90FF;
+	background: #8FBC8F;
 	padding: 0em 0 0em;
 }
 .footer-left{
@@ -445,7 +445,7 @@ a.try-demo:hover{
 		margin: 0.5em auto 0;
 	}
 	a.big-btn {
-		padding: 0.0em 0.0em;
+		padding: 0.8em 2.8em;
 	}
 }
 @media (max-width:480px){
