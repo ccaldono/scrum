@@ -7,11 +7,11 @@
    
     <tr>
         <td>Nombre proyecto *: <br><br></td>
-        <td><?php echo Form::text('proyecto.nombre') ?><br><br></td>
+        <td><?php echo Form::text('proyecto.nombre', "placeholder='Ingrese nombre del proyecto'") ?><br><br></td>
     </tr>
     <tr>
         <td>Descripción : <br><br></td>
-        <td> <?php echo Form::textarea('proyecto.descripcion') ?><br><br></td>
+        <td> <?php echo Form::textarea('proyecto.descripcion', "placeholder='Ingrese una descripción sobre el proyecto'") ?><br><br></td>
     </tr>  
     <tr>
         <td>Fecha de inicio *: <br><br></td>
@@ -20,13 +20,7 @@
     <tr>
         <td>Fecha de finalización *: <br><br></td>
         <td> <?php echo Form::date('proyecto.fechaFin') ?><br><br></td>
-    </tr>
-   
-<!--    <tr>
-        <td>Estado *:</td>
-        <td><?php echo Form::text('proyecto.estado') ?></td>
-    </tr>-->
-   
+    </tr>  
     
         
         <td>&nbsp;</td>

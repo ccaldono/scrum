@@ -6,12 +6,12 @@
     <div><em>Los campos con * son obligatorios</em></div>
     
   <div>
-    <div><label for="correo">Correo*: </label><br/><br/></div>
-    <div><?php echo Form::text("correo"); ?><br/><br/></div>
+    <div><br/><br/><label for="correo">Correo*: </label><br/><br/></div>
+    <div><?php echo Form::text("correo", "placeholder='Ingrese su correo'"); ?><br/><br/><br/></div>
   </div>
   <div>
     <div><label for="contrasena">Contraseña*: </label><br/><br/></div>
-    <div ><?php echo Form::pass("contrasena"); ?><br/><br/></div>
+    <div ><?php echo Form::pass("contrasena", "placeholder='Ingrese su contraseña'"); ?><br/><br/></div>
   </div>
   <div>
        <ul> <?php echo Form::submit("Ingresar","class: boton"); ?><br/><br/></ul>
