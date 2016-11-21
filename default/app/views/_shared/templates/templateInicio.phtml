@@ -4,7 +4,7 @@
 		<title>Inicio</title>
 		<!--<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />-->
                 <?php Tag::css("estiloScrumsy/bootstrap")?>
-                
+                <?php Tag::css("estiloScrumsy")?>
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<!--<script src="js/jquery.min.js"></script>-->
                  <?php echo Tag::js("templateScrumsy/jquery.min")?>
@@ -47,46 +47,42 @@
 		<!----webfonts--->
 		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
 		<!---//webfonts--->
-                
-                <?php echo Html::includeCss()?>
+                 <?php echo Html::includeCss()?>
                 
 	</head>
         
+        
+        
         <body>
             
+            
              <!-- Navigation -->
-    <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
-        <div class="container">
-                   
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                   
-                    <li>
-                        <a class="page-scroll" href="http://localhost/scrum/">Iniciar Sesión</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
+   
+        
         <!-- /.container-fluid -->
-        </nav>
+      
             
 		<!---- container ---->
 			<!---- header ---->
                     
-			<div class="header">
-                            
+                        <div class="header" align="right">
+                            <nav>
+                                <ul class="navegacion">
+                                    <li><a href="http://localhost/scrum/">Iniciar Sesión</a></li>
+                                    <li><a href="http://localhost/scrum/usuarios/registrarUsuario">Registrar</a></li>
+                                    <li><a href="#"> Acerca de</a></li>
+                                </ul>	
+                            </nav>
+
 				<div class="container">
 				<!--- beanner-info---->
 				<div class="banner-info text-center wow fadeIn" data-wow-delay="0.5s">
 					<!--<h1>Scrumsy</h1>-->
 					  
-					 <p></p></br></br></br></br></br>
+					 <p></p></br></br>
+
+                                          <p><strong>Esta aplicación ofrece múltiples funcionalidades, dirigidas hacia el desarrollo de proyectos, utilizando "Scrum" como metodología para la comunicación e interacción del equipo. Dentro de la aplicación se podrá navegar de forma amigable, ya que provee interfaces intuitivas y de alto nivel, también provee creación de artefactos propios de la metodología "Scrum" tales como el Backlog de producto, el Backlog de Sprint y Scrum Taskboar y el incremento de funcionalidad.</strong></p>
 					
-					
-					
-					<a class="big-btn wow shake" data-wow-delay="0.3s" href="http://localhost/scrum/usuarios/registrarUsuario">Registrar</a>
 				</div>
 				<!--- beanner-info---->
 				<!---- video ---->
@@ -229,7 +225,7 @@
 				
 				
 				
-				
+<!--				
 				<div class="content-bottom-grids">
 					<div class="container">
 						
@@ -241,7 +237,7 @@
 						
 					</div>
 				</div>
-				
+				-->
 				
 				
 				

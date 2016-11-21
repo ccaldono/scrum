@@ -19,7 +19,7 @@ body a{
 /*---- container ----*/
 .header{
 	background: url(http://localhost/scrum/img/images/banner1.jpg) no-repeat 0px 0px #FFFFFF;
-	background-size: 90% 90%;
+	background-size: 100% 100%;
 	min-height: 770px;
 }
 .banner-info{
@@ -445,7 +445,7 @@ a.try-demo:hover{
 		margin: 0.5em auto 0;
 	}
 	a.big-btn {
-		padding: 0.8em 2.8em;
+		padding: 0.0em 0.0em;
 	}
 }
 @media (max-width:480px){
