@@ -56,19 +56,23 @@ class UsuariosController extends AppController{
              
              $usuario = new Usuarios($temporal);
              
-            if(!$usuario ->save()){
-                Flash::error('Falló Operación');
-                //se hacen persistente los datos en el formulario
-                $this->usuarios = Input::Post('usuario');
-                /**
-                 * NOTA: para que la autocarga aplique de forma correcta, es necesario que llame a la variable de instancia
-                 * igual como esta el model de la vista, en este caso el model es "menus" y quedaria $this->menus
-                 */
-            }else{
-                Flash::success('Operación exitosa');               
-                Router::redirect("saludo");
-               }
-        }
+                if(!$usuario ->save()){
+                    Flash::error('Falló Operación');
+                    //se hacen persistente los datos en el formulario
+                    $this->usuarios = Input::Post('usuario');
+                    /**
+                     * NOTA: para que la autocarga aplique de forma correcta, es necesario que llame a la variable de instancia
+                     * igual como esta el model de la vista, en este caso el model es "menus" y quedaria $this->menus
+                     */
+                }else{
+                    $auth = new Auth("model", "class: usuarios", "correo: $usuario->correo", "contrasena: $usuario->contrasena");                    
+                    if ($auth->authenticate()) {
+                        Router::redirect("saludo");                      
+                    } else {
+                        Flash::error("Usuario no disponible en la base de datos");
+                    }
+                }
+            }
         }
     }
     
