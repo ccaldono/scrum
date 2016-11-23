@@ -19,7 +19,7 @@ body a{
 /*---- container ----*/
 .header{
 	background: url(http://localhost/scrum/img/images/banner1.jpg) no-repeat 0px 0px #FFFFFF;
-	background-size: 90% 90%;
+	background-size: 100% 100%;
 	min-height: 770px;
 }
 .banner-info{
@@ -28,12 +28,12 @@ body a{
 .banner-info h1{
 	font-size: 3.8em;
 	font-weight: 300;
-	color: #FFF;
+	color: #AB3535;
 	margin: 0em 0 0.4em;
 	padding: 0;
 }
 .banner-info p{
-	color: #FFF;
+	color: #000;
 	font-weight: 300;
 	font-style: italic;
 	font-size: 1.2em;
@@ -240,7 +240,7 @@ a.try-demo:hover{
 }
 /*---- footer ----*/
 .footer{
-	background: #1E90FF;
+	background: #8FBC8F;
 	padding: 0em 0 0em;
 }
 .footer-left{

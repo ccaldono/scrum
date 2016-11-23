@@ -8,25 +8,25 @@
     <table>
     <tr>
         <td><strong>Nombre *:</strong> <br><br></td>
-        <td> <?php echo Form::text('usuario.nombre') ?> <br><br></td>
+        <td> <?php echo Form::text('usuario.nombre', "placeholder='Ingrese su nombre'") ?> <br><br></td>
        
     </tr>
    
     <tr>
         <td><strong>Apellido *:</strong><br><br></td>
-        <td><?php echo Form::text('usuario.apellido') ?><br><br></td>
+        <td><?php echo Form::text('usuario.apellido', "placeholder='Ingrese su apellido'") ?><br><br></td>
           
     </tr> 
   
      
     <tr>
         <td><strong>Correo *:</strong><br><br></td>
-        <td><?php echo Form::text('usuario.correo') ?><br><br></td>
+        <td><?php echo Form::text('usuario.correo', "placeholder='Ingrese su correo'") ?><br><br></td>
     </tr>
    
      <tr>
         <td><strong>Contraseña *:</strong><br><br></td>
-        <td><?php echo Form::pass('usuario.contrasena') ?><br><br></td>
+        <td><?php echo Form::pass('usuario.contrasena', "placeholder='Ingrese su contraseña'") ?><br><br></td>
        
         
    
