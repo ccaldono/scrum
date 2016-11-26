@@ -7,9 +7,7 @@ class Proyecto extends ActiveRecord{
         return $this->paginate("page: $page","per_page: $ppage");
         
     }
-       
-
-    protected function initialize()
+     protected function initialize()
     {
          $this->validates_presence_of("nombre");
          $this->validates_presence_of("descripcion");

@@ -1,7 +1,8 @@
-table {  color: white; font-family: Helvetica, Arial, sans-serif; width: 640px; border-collapse: collapse;}
+table {     font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 17px;    margin: 45px;     width: 480px; text-align: left;    border-collapse: collapse; }
 td, th { border: 1px solid transparent; height: 30px; }
-th { background: black; font-weight: bold; }
-td { background: red; text-align: center; }
-tr:nth-child(even) td { background:#0B3B0B; }  
-tr:nth-child(odd) td { background:#0B610B; } 
-tr td:hover { background:blue ; color: yellow; }
+th { background: #b9c9fe; font-weight: bold;border-top: 4px solid #aabcfe;    border-bottom: 1px solid #fff; }
+td { background: red; text-align: center; border-bottom: 1px solid #fff; border-top: 1px solid transparent; }
+tr:nth-child(even) td { background:#1E90FF; }  
+tr:nth-child(odd) td { background:#ADD8E6; } 
+tr td:hover { background:white ; color: yellow; }

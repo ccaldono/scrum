@@ -4,12 +4,13 @@
     <h3>Proyectos</h3>
    
 <table >
-<tr> <th>Rol</th> <th>Nombre del Proyecto</th> <th>Opciones</th></tr>
+    <tr> <th>Rol</th> <th> &nbsp; &nbsp;&nbsp;&nbsp;Nombre del Proyecto</th> <th>Editar</th><th>&nbsp; &nbsp;&nbsp;&nbsp;Cancelar</th></tr>
 <?php foreach ($listProyectos->items as $item) : ?>
     <tr>
-         <td></td>
-         <td><?php echo Html::linkAction("#" ,$item->nombre );?></td>
-         <td><?php echo Html::linkAction("edit/$item->id/", Html::img('editar.png')) ?>   <?php echo Html::linkAction("edit/$item->id/",  Html::img('cancelar.png')) ?></td>
+         <td>gerente</td>
+         <td> <?php echo Html::linkAction("view/$item->id/" ,$item->nombre);?></td>
+         <td><?php echo Html::linkAction("edit/$item->id/", Html::img('edit.png')) ?> </td>
+         <td>  <?php echo Html::linkAction("edit/$item->id/",  Html::img('cancel.png')) ?></td>
     </tr>
      <?php endforeach; ?>
 </table>     

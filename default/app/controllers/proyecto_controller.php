@@ -9,7 +9,7 @@ class ProyectoController extends AppController{
        
         if(Auth::is_valid()){
             $this->titulo ='Mis proyectos:';
-        $this->subtitulo ='.i.';
+        $this->subtitulo ='';
         $proyecto = new Proyecto();
         $this->listProyectos = $proyecto->getProyectos($page);
         }else{
@@ -83,6 +83,35 @@ class ProyectoController extends AppController{
             }
 
 
+        }else{
+            //Aplicando la autocarga de objeto, para comenzar la edición
+            $this->proyecto = $proyecto->find_by_id((int)$id);
+             $this->subtitulo =$this->proyecto->nombre;
+             //Redirect::to('../scrum/index');
+            echo "<br/><h1>" . "ERROR! no has iniciado sesión." . "</h1>";
+            echo "Solo usuarios registrados pueden acceder a esta página." . "<br/>";
+            echo "<br/><h2>" . "<a href='../index'>Iniciar sesión</a>"."</h2>";
+            exit;
+        }
+    }
+    
+    public function view($id)
+    {
+
+        if(Auth::is_valid()){
+             $this->titulo ='Detalles del proyecto:';
+             //$this->proyecto = $proyecto->find_by_id((int)$id);
+            $proyecto = new proyecto();
+
+            //se verifica si se ha enviado el formulario (submit)
+           
+                //Aplicando la autocarga de objeto, para comenzar la edición
+              $proyecto = new Proyecto();
+                 $this->proyecto = $proyecto->find_by_id((int)$id);
+                 //consultar HU donde la foreign key( apunta a proyecto, sea igual al ID de entrada)
+                 
+                 $this->subtitulo =$this->proyecto->nombre;
+                 
         }else{
             //Aplicando la autocarga de objeto, para comenzar la edición
             $this->proyecto = $proyecto->find_by_id((int)$id);

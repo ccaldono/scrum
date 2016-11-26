@@ -1,0 +1,56 @@
+<div class="content">
+<?php View::content(); ?>
+
+<?php echo Form::open(); // por defecto llama a la misma url ?>
+     <?php echo View::content();;Tag::css('william');      
+    echo Html::includeCss(); ?>
+    
+    <div id="izquierda">
+        <table >
+    <tr> <th>Atributo</th> <th>Detalle</th></tr>
+    <tr>
+         <td>Nombre de Proyecto</td>
+         <td><?php $varNombre=$proyecto->nombre;echo $varNombre ?> </td>
+         
+    </tr>
+     <tr>
+         <td>Descripción</td>
+         <td><?php $varNombre=$proyecto->descripcion;echo $varNombre ?> </td>
+    </tr>
+     <tr>
+         <td>Fecha de Inicio</td>
+         <td><?php $varNombre=$proyecto->fechaInicio;echo $varNombre?> </td>
+    </tr>
+     <tr>
+         <td>Fecha de Finalizacion</td>
+         <td><?php $varNombre=$proyecto->fechaFin;echo $varNombre ?> </td>
+    </tr>
+     </table>
+        </div>
+    <div id="izquierda">
+        <table >
+    <tr> <th>Atributo</th> <th>Detalle</th></tr>
+    <tr>
+         <td>Nombre de Proyecto</td>
+         <td><?php $varNombre=$proyecto->nombre;echo $varNombre ?> </td>
+         
+    </tr>
+     <tr>
+         <td>Descripción</td>
+         <td><?php $varNombre=$proyecto->descripcion;echo $varNombre ?> </td>
+    </tr>
+     <tr>
+         <td>Fecha de Inicio</td>
+         <td><?php $varNombre=$proyecto->fechaInicio;echo $varNombre?> </td>
+    </tr>
+     <tr>
+         <td>Fecha de Finalizacion</td>
+         <td><?php $varNombre=$proyecto->fechaFin;echo $varNombre ?> </td>
+    </tr>
+     </table>
+        </div>
+    <div align="center"> 
+     <a href="../../" class="myButton">Aceptar</a>
+        </div> 
+</div>
+
