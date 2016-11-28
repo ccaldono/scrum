@@ -24,6 +24,7 @@ class IndexController extends AppController
             } else {
                 Flash::error("Usuario no disponible en la base de datos");
                  //hh
+                //h2
             }
         }
     
