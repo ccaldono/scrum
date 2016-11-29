@@ -27,26 +27,16 @@
     </tr>
      </table>
         </div>
+        
     <div id="izquierda">
         <table >
-    <tr> <th>Atributo</th> <th>Detalle</th></tr>
+    <tr> <th>Descripcion</th> <th>Prioridad</th><th>Esfuerzo</th></tr>
+    <?php foreach ($inner as $i) : ?>
     <tr>
-         <td>Nombre de Proyecto</td>
-         <td><?php $varNombre=$proyecto->nombre;echo $varNombre ?> </td>
-         
+         <td><?php echo $i->descripcion?></td>
+                
     </tr>
-     <tr>
-         <td>Descripción</td>
-         <td><?php $varNombre=$proyecto->descripcion;echo $varNombre ?> </td>
-    </tr>
-     <tr>
-         <td>Fecha de Inicio</td>
-         <td><?php $varNombre=$proyecto->fechaInicio;echo $varNombre?> </td>
-    </tr>
-     <tr>
-         <td>Fecha de Finalizacion</td>
-         <td><?php $varNombre=$proyecto->fechaFin;echo $varNombre ?> </td>
-    </tr>
+     <?php endforeach; ?>
      </table>
         </div>
     <div align="center"> 
