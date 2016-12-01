@@ -1,6 +1,6 @@
 <?php
 
-Load:: models('proyecto');
+Load:: models('proyecto','historiausuario');
 class ProyectoController extends AppController{
     
     
@@ -109,8 +109,10 @@ class ProyectoController extends AppController{
               $proyecto = new Proyecto();
                  $this->proyecto = $proyecto->find_by_id((int)$id);
                  //consultar HU donde la foreign key( apunta a proyecto, sea igual al ID de entrada)
-                 
-                 $this->subtitulo =$this->proyecto->nombre;
+              //$historiausuario= new Historiausuario();
+            //$this->lista_historias=$historiausuario->getHistorias(1);
+                 //$this->subtitulo =$this->proyecto->nombre;
+                 $this->inner=$proyecto->getInnerJoin((int)$id);
                  
         }else{
             //Aplicando la autocarga de objeto, para comenzar la edición
