@@ -3100,6 +3100,7 @@ fieldset[disabled] a.btn {
 .btn-default.disabled:hover,
 .btn-default[disabled]:hover,
 fieldset[disabled] .btn-default:hover,
+/*aqui prueba*/
 .btn-default.disabled:focus,
 .btn-default[disabled]:focus,
 fieldset[disabled] .btn-default:focus,
@@ -3120,7 +3121,7 @@ fieldset[disabled] .btn-default.focus {
 }
 .btn-primary:focus,
 .btn-primary.focus {
-  color: #fff;
+  color: #F21200;
   background-color: #286090;
   border-color: #122b40;
 }
