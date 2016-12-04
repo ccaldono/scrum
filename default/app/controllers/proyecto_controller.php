@@ -100,19 +100,17 @@ class ProyectoController extends AppController{
 
         if(Auth::is_valid()){
              $this->titulo ='Detalles del proyecto:';
+             
+            // $this->subtitulo ='hola';
              //$this->proyecto = $proyecto->find_by_id((int)$id);
-            $proyecto = new proyecto();
-
-            //se verifica si se ha enviado el formulario (submit)
            
-                //Aplicando la autocarga de objeto, para comenzar la edición
               $proyecto = new Proyecto();
                  $this->proyecto = $proyecto->find_by_id((int)$id);
-                 //consultar HU donde la foreign key( apunta a proyecto, sea igual al ID de entrada)
-              //$historiausuario= new Historiausuario();
-            //$this->lista_historias=$historiausuario->getHistorias(1);
-                 //$this->subtitulo =$this->proyecto->nombre;
-                 $this->inner=$proyecto->getInnerJoin((int)$id);
+                 $this->subtitulo =$this->proyecto->nombre;
+                // $this->inner=$proyecto->consultar((int)$id);
+                 $historiausuario= new Historiausuario();
+                 $this->historia=$historiausuario->consultarHistoria((int)$id);
+                 
                  
         }else{
             //Aplicando la autocarga de objeto, para comenzar la edición

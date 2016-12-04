@@ -14,9 +14,12 @@ class Proyecto extends ActiveRecord{
          $this->validates_presence_of("fechaInicio");
          $this->validates_presence_of("fechaFin");
     }
-    public function getInnerJoin($id){
-        return $this->find('columns: proyecto.id,historiausuario.descripcion',
-                           'join: inner join historiausuario on proyecto.id = historiausuario.idproyecto');
+    public function consultar($page=1,$id){
+        //return $this->find('columns: proyecto.id,historiausuario.descripcion,historiausuario.prioridad,historiausuario.esfuerzo',
+          //                 'join: inner join historiausuario on proyecto.id = historiausuario.idproyecto');
+        //return 
+        //$this->find_by_sql('select * from historiausuario where proyecto_id="$id"');
+        
     }
 }
 

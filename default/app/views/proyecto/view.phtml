@@ -31,9 +31,15 @@
     <div id="izquierda">
         <table >
     <tr> <th>Descripcion</th> <th>Prioridad</th><th>Esfuerzo</th></tr>
-    <?php foreach ($inner as $i) : ?>
+   
+    <?php foreach ($historia->items As $i) : ?>
     <tr>
+        
          <td><?php echo $i->descripcion?></td>
+         <td><?php echo $i->prioridad?></td>
+         <td><?php echo $i->esfuerzo?></td>
+         
+          
                 
     </tr>
      <?php endforeach; ?>
