@@ -1,6 +1,6 @@
 .button {
 	background:#4e6096;
-	color:#fff;
+	color:#337ab7;
 	display:inline-block;
         border-radius: 7px;
 	font-size:1.25em;
@@ -28,6 +28,7 @@
 
     display: inline;
     margin:50px; 
+    color: transparent;
 
 }
 
