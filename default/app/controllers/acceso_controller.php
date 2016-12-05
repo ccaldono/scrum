@@ -18,7 +18,7 @@ class accesoController extends AppController {
                 Router::redirect("usuarios/index");
                 echo $pwd;
             } else {
-                Flash::error("Usuario no disponible en la base de datasos");
+                Flash::error('<font color="red">Usuario no disponible en la base de datasos</font>');
              
             }
         }
