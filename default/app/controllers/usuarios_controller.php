@@ -46,7 +46,8 @@ class UsuariosController extends AppController{
              $contraTemporal=$temporal['contrasena'];
              $longitudContra=  strlen($contraTemporal);
              if($longitudContra<6 or $longitudContra >16 ){             
-              Flash::error('La contraseña debe tener minimo 6 caracteres, maximo 16');
+              //Flash::error('La contraseña debe tener minimo 6 caracteres, maximo 16');
+               Flash::error('<font color = "red">La contraseña debe tener minimo 6 caracteres, maximo 16</font>');
                 //se hacen persistente los datos en el formulario
                 $this->usuarios = Input::Post('usuario');             
              }
@@ -57,7 +58,7 @@ class UsuariosController extends AppController{
              $usuario = new Usuarios($temporal);
              
                 if(!$usuario ->save()){
-                    Flash::error('Falló Operación');
+                    Flash::error('<font color = "red">Falló operación</font>');
                     //se hacen persistente los datos en el formulario
                     $this->usuarios = Input::Post('usuario');
                     /**
@@ -69,8 +70,8 @@ class UsuariosController extends AppController{
                     if ($auth->authenticate()) {
                         Router::redirect("saludo");                      
                     } else {
-                        Flash::error("Usuario no disponible en la base de datos");
-                    }
+                    }                        Flash::error('<font color = "red">Usuario no disponible en la base de datos</font>');
+
                 }
             }
         }

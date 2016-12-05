@@ -22,7 +22,7 @@ class IndexController extends AppController
             if ($auth->authenticate()) {
                 Router::redirect("proyecto/index");
             } else {
-                Flash::error("Usuario no disponible en la base de datos");
+                Flash::error('<font color="red">Usuario no disponible en la base de datos</font>');
                  //hh
                 //h23
             }

@@ -10,7 +10,7 @@
 }
 
 .error {
-	color: #D8000C;
+	color: red;
 	background-color: #FFBABA;
 	background-image: url('../img/default/error.png');
 }
@@ -27,7 +27,7 @@
 	background-image:url('../img/default/valid.png');
 }
 .warning {
-	color: #9F6000;
+	color: #d61111;
 	background-color: #FEEFB3;
 	background-image: url('../img/default/warning.png');
 }
@@ -49,7 +49,7 @@ div.autocomplete ul {
 	padding: 0;
 }
 div.autocomplete ul li.selected {
-	background-color: #ffb;
+	background-color: #d61111;
 }
 div.autocomplete ul li {
       list-style-type: none;

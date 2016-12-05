@@ -38,7 +38,7 @@ class ProyectoController extends AppController{
                 $proyecto = new Proyecto(Input::Post('proyecto'));
                 //En caso que falle la operación de guardar
                 if(!$proyecto->save()){
-                    Flash::error('Falló Operación');               
+                    Flash::error('<font color = "red">Falló operación</font>');               
                     //se hacen persistente los datos en el formulario
                     $this->proyecto = Input::Post('proyecto');
                     /**
@@ -46,7 +46,7 @@ class ProyectoController extends AppController{
                      * igual como esta el model de la vista, en este caso el model es "menus" y quedaria $this->menus
                      */
                 }else{
-                    Flash::success('Operación exitosa');
+                    Flash::success('<font color = "green">Operación exitosa</font>');
                 }
             }
         }else{
@@ -70,11 +70,11 @@ class ProyectoController extends AppController{
             if(Input::hasPost('proyecto')){
 
                 if($proyecto->update(Input::post('proyecto'))){
-                     Flash::valid('Operación exitosa');
+                     Flash::valid('<font color = "green">Operación exitosa</font>');
                     //enrutando por defecto al index del controller
                     return Redirect::to();
                 } else {
-                    Flash::error('Falló Operación');
+                    Flash::error('<font color = "red">Falló operación </font>');
                 }
             } else {
                 //Aplicando la autocarga de objeto, para comenzar la edición

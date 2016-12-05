@@ -27,11 +27,11 @@ class MisProyectosController extends AppController {
             if(Input::hasPost('proyecto')){
 
                 if($proyecto->update(Input::post('proyecto'))){
-                     Flash::valid('Operación exitosa');
+                     Flash::valid('<font color="green">Operación exitosa</font>');
                     //enrutando por defecto al index del controller
                     return Redirect::to();
                 } else {
-                    Flash::error('Falló Operación');
+                    Flash::error('<font color="red">Falló Operación</font>');
                 }
             } else {
                 //Aplicando la autocarga de objeto, para comenzar la edición
