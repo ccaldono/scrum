@@ -1,5 +1,5 @@
 <?php
-
+Load:: models('proyecto','usuarios');
 /**
  * Controller por defecto si no se usa el routes
  * 
@@ -20,9 +20,11 @@ class IndexController extends AppController
             $pwd=  sha1($pwd);
             $auth = new Auth("model", "class: usuarios", "correo: $correo", "contrasena: $pwd");
             if ($auth->authenticate()) {
-                Router::redirect("proyecto/index");
+               $usuarios= new Usuarios();
+                $user=$usuarios->consultarUsuario($correo);
+                Router::redirect("saludo/index/$user->id");                 
             } else {
-                Flash::error("Usuario no disponible en la base de datos");
+                Flash::error("Usuario o contraseña incorrectos");
                  //hh
                 //h23
             }
