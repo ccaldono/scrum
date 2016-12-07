@@ -2,7 +2,7 @@
 <?php View::content(); ?>
 
 <?php echo Form::open(); // por defecto llama a la misma url ?>
-        
+       
 <table>
    
     <tr>
@@ -21,9 +21,8 @@
         <td>Fecha de finalización *: <br><br></td>
         <td> <?php echo Form::date('proyecto.fechaFin') ?><br><br></td>
     </tr>  
-    
-        
-        <td>&nbsp;</td>
+       <?php echo Form::hidden('proyecto.usuario_id',null,$id) ?>
+        <td>&nbsp</td>
         <td> <?php echo Form::submit('Crear proyecto') ?></td>
     </tr>
 </table>
