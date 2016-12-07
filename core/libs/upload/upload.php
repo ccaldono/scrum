@@ -226,7 +226,9 @@ abstract class Upload
                 UPLOAD_ERR_EXTENSION => 'una extensión de php ha detenido la subida del archivo'
             );
 
-            Flash::error('Error: ' . $error[$_FILES[$this->_name]['error']]);
+            //Flash::error('Error: ' . $error[$_FILES[$this->_name]['error']]);
+            Flash::error('<font color="red">Error: </font>' . $error[$_FILES[$this->_name]['<font color="red">error</font>']]);
+            //Flash::error('<font color="red">Error:  . $error[$_FILES[$this->_name][error]]</font>');
             return FALSE;
         }
         return TRUE;
@@ -247,13 +249,13 @@ abstract class Upload
 
         // Valida el tipo de archivo
         if ($this->_types !== NULL && !$this->_validatesTypes()) {
-            Flash::error('Error: el tipo de archivo no es válido');
+            Flash::error('<font color="red">Error: el tipo de archivo no es válido</font>');
             return FALSE;
         }
 
         // Valida extensión del archivo
         if ($this->_extensions !== NULL && !preg_match('/\.(' . implode('|', $this->_extensions) . ')$/i', $_FILES[$this->_name]['name'])) {
-            Flash::error('Error: la extensión del archivo no es válida');
+            Flash::error('<font color="red">Error: la extensión del archivo no es válida</font>');
             return FALSE;
         }
 
@@ -306,7 +308,7 @@ abstract class Upload
             return TRUE;
         }
         if (file_exists("$this->_path/$name")) {
-            Flash::error('Error: ya existe este fichero. Y no se permite reescribirlo');
+            Flash::error('<font color="red">Error: ya existe este fichero. Y no se permite reescribirlo</font>');
             return FALSE;
         }
         return TRUE;
@@ -339,7 +341,7 @@ abstract class Upload
                 break;
             default :
                 $size = -1;
-                Flash::error('Error: el tamaño debe ser un int para bytes, o un string terminado con K, M o G. Ej: 30k , 2M, 2G');
+                Flash::error('<font color="red">Error: el tamaño debe ser un int para bytes, o un string terminado con K, M o G. Ej: 30k , 2M, 2G</font>');
         }
 
         return $size;

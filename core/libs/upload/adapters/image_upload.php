@@ -76,7 +76,7 @@ class ImageUpload extends Upload
         $this->_imgInfo = getimagesize($_FILES[$name]['tmp_name']);
 
         // Ruta donde se guardara el archivo
-        $this->_path = dirname($_SERVER['SCRIPT_FILENAME']) . '/img/upload';
+        $this->_path = dirname($_SERVER['SCRIPT_FILENAME']) . '/img/upload';  
     }
 
     /**

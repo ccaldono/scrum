@@ -27,12 +27,12 @@
 	ob_start();
 
 	Flash::show('cuidado','Kumbia puede ser adictivo.');
-	flash::error('Test de flash::error');
+	flash::error('<font color=blue>Test de flash::error</font>');
 	flash::notice('Test de flash::notice');
 	flash::success('Test de flash::success');
 	flash::warning('Test de flash::warning');
 	flash::interactive('Test de flash::interactive');
-	flash::kumbia_error('Test de flash::kumbia_error');
+	flash::kumbia_error('<font color=blue>Test de flash::kumbia_error</font>');
 
 	$salida = ob_get_contents();
 	ob_end_clean();
@@ -40,7 +40,7 @@
 
 
 	$correcto = '<div class="flash_show cuidado">Kumbia puede ser adictivo.</div>
-<div class="flash_show error_message">Test de flash::error</div>
+<div class="flash_show error_message"><font color="red">Test de flash::error</font></div>
 <div class="flash_show notice_message">Test de flash::notice</div>
 <div class="flash_show success_message">Test de flash::success</div>
 <div class="flash_show warning_message">Test de flash::warning</div>

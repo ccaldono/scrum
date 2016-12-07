@@ -27,7 +27,7 @@ class ScaffoldController extends AdminController
             $obj = Load::model($this->model);
             //En caso que falle la operación de guardar
             if (!$obj->save(Input::post($this->model))) {
-                Flash::error('Falló Operación');
+                Flash::error('<font color=red>Falló operación</font>');
                 //se hacen persistente los datos en el formulario
                 $this->{$this->model} = $obj;
                 return;
@@ -49,7 +49,7 @@ class ScaffoldController extends AdminController
         if (Input::hasPost($this->model)) {
             $obj = Load::model($this->model);
             if (!$obj->update(Input::post($this->model))) {
-                Flash::error('Falló Operación');
+               Flash::error('<font color=red>Falló operación</font>');
                 //se hacen persistente los datos en el formulario
                 $this->{$this->model} = Input::post($this->model);
             } else {
@@ -67,7 +67,7 @@ class ScaffoldController extends AdminController
     public function borrar($id)
     {
         if (!Load::model($this->model)->delete((int) $id)) {
-            Flash::error('Falló Operación');
+            Flash::error('<font color=red>Falló operación</font>');
         }
         //enrutando al index para listar los articulos
         Redirect::to();

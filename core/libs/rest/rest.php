@@ -97,7 +97,7 @@ class Rest
          * Si no lo encuentro, revuelvo un error
          */
         if (self::$_oFormat == null) {
-            return 'error';
+            return '<font color="red">error</font>';
         } else {
             View::response(self::$_oFormat);
             View::select('response');

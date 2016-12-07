@@ -1358,11 +1358,11 @@ class KumbiaActiveRecord
                     if (!$ex && $f == $this->primary_key[0])
                         continue;
                     if (isset($opt['message'])) {
-                        Flash::error($opt['message']);
+                        Flash::error($opt['<font color=red>message</font>']);
                         return false;
                     } else {
                         $field = isset($opt['field']) ? $opt['field'] : $f;
-                        Flash::error("Error: El campo $field no puede ser nulo");
+                        Flash::error("<font color=red>Error: El campo $field no puede ser nulo</font>");
                         return false;
                     }
                 }
@@ -1391,7 +1391,7 @@ class KumbiaActiveRecord
                 if ($ex && in_array($f, $this->_in)) {
                     continue;
                 }
-                Flash::error("Error: El campo $f no puede ser nulo");
+                Flash::error("<font color=red>Error: El campo $f no puede ser nulo</font>");
                 return false;
             }
         }
@@ -1409,7 +1409,7 @@ class KumbiaActiveRecord
                         if (isset($opt['too_short']))
                             Flash::error($opt['too_short']);
                         else
-                            Flash::error("Error: El campo $field debe tener como mínimo $opt[min] caracteres");
+                            Flash::error("<font color=red>Error: El campo $field debe tener como mínimo $opt[min] caracteres</font>");
                         return false;
                     }
 
@@ -1417,7 +1417,7 @@ class KumbiaActiveRecord
                         if (isset($opt['too_long']))
                             Flash::error($opt['too_long']);
                         else
-                            Flash::error("Error: El campo $field debe tener como máximo $opt[max] caracteres");
+                            Flash::error("<font color=red>Error: El campo $field debe tener como máximo $opt[max] caracteresss</font>");
                         return false;
                     }
                 }
@@ -1435,7 +1435,7 @@ class KumbiaActiveRecord
                         Flash::error($opt['message']);
                     } else {
                         $field = isset($opt['field']) ? $opt['field'] : $f;
-                        Flash::error("$field debe tener un valor entre (" . join(",", $opt['list']) . ")");
+                        Flash::error("<font color=red>$field debe tener un valor entre (" . join(",", $opt['list']) . ")</font >");
                     }
                     return false;
                 }
@@ -1453,7 +1453,7 @@ class KumbiaActiveRecord
                         Flash::error($opt['message']);
                     } else {
                         $field = isset($opt['field']) ? $opt['field'] : $f;
-                        Flash::error("$field no debe tener un valor entre (" . join(",", $opt['list']) . ")");
+                        Flash::error("<font color=red>$field no debe tener un valor entre (" . join(",", $opt['list']) . ")</font >");
                     }
                     return false;
                 }
@@ -1471,7 +1471,7 @@ class KumbiaActiveRecord
                         Flash::error($opt['message']);
                     } else {
                         $field = isset($opt['field']) ? $opt['field'] : $f;
-                        Flash::error("$field debe tener un valor numérico");
+                        Flash::error("<font color=red>$field debe tener un valor numérico</font >");
                     }
                     return false;
                 }
@@ -1489,7 +1489,7 @@ class KumbiaActiveRecord
                         Flash::error($opt['message']);
                     } else {
                         $field = isset($opt['field']) ? $opt['field'] : $f;
-                        Flash::error("Formato erroneo para $field");
+                        Flash::error("<font color=red>Formato erroneo para $field</font >");
                     }
                     return false;
                 }
@@ -1507,7 +1507,7 @@ class KumbiaActiveRecord
                         Flash::error($opt['message']);
                     } else {
                         $field = isset($opt['field']) ? $opt['field'] : $f;
-                        Flash::error("Formato de fecha erroneo para $field");
+                        Flash::error("<font color=red>Formato de fecha erroneo para $field</font>");
                     }
                     return false;
                 }
@@ -1525,7 +1525,10 @@ class KumbiaActiveRecord
                         Flash::error($opt['message']);
                     } else {
                         $field = isset($opt['field']) ? $opt['field'] : $f;
-                        Flash::error("Formato de e-mail erroneo en el campo $field");
+                        //Flash::error('"<font color="red">FFormato de e-mail erroneo en el campo</font> $field"'$field);
+                        //Flash::error("FFormato de e-mail erroneo en el campo $field");
+                        Flash::error("<font color=red>Formato de e-mail erroneo en el campo $field </font>");
+                        //Flash::error("'<font color=red>$field</font>'");
                     }
                     return false;
                 }
@@ -1549,7 +1552,8 @@ class KumbiaActiveRecord
                         Flash::error($opt['message']);
                     } else {
                         $field = isset($opt['field']) ? $opt['field'] : $f;
-                        Flash::error("El valor '{$this->$f}' ya existe para el campo $field");
+                        
+                        Flash::error("<font color=red>El valor {$this->$f} ya existe para el campo $field</font>");
                     }
                     return false;
                 }
@@ -1826,7 +1830,8 @@ class KumbiaActiveRecord
                 return true;
             }
         } else {
-            Flash::error('No se puede actualizar porque el registro no existe');
+            Flash::error('<font color="red">No se puede actualizar porque el registro no existe</font>');
+            
             return false;
         }
     }

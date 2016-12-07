@@ -57,6 +57,7 @@ class Flash
     public static function error($text)
     {
         return self::show('error', $text);
+        
     }
 
     /**
@@ -111,6 +112,7 @@ class Flash
     public static function success($text)
     {
         return self::show('valid', $text);
+        
     }
 
 }
