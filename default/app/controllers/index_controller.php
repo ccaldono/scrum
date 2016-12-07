@@ -25,8 +25,7 @@ class IndexController extends AppController
                 Router::redirect("saludo/index/$user->id");                 
             } else {
                 Flash::error("Usuario o contraseña incorrectos");
-                 //hh
-                //h23
+               
             }
         }
     

@@ -50,7 +50,7 @@
 <body>
 
     <div id="wrapper">
-       <?php View::partial('template/sidebar') ?>
+       <?php View::partial('template/sidebar',FALSE,array('id'=>$id,'nombre'=>$nombre,'apellido'=>$apellido)) ?>
         <div id="page-wrapper"> 
             <?php View::partial('template/intro',FALSE,array('titulo'=>$titulo,'subtitulo'=>$subtitulo)) ?>
             <?php View::content() ?>

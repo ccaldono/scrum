@@ -7,6 +7,7 @@ class MisProyectosController extends AppController {
    	if(Auth::is_valid()){ 
             $this->titulo ='Mis proyectos:';
             $this->subtitulo ='';
+           
             $proyecto= new Proyecto();
             $this->listProyectos=$proyecto->getProyectos($page);
         }else{

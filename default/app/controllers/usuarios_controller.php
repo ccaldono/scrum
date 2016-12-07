@@ -67,7 +67,9 @@ class UsuariosController extends AppController{
                 }else{
                     $auth = new Auth("model", "class: usuarios", "correo: $usuario->correo", "contrasena: $usuario->contrasena");                    
                     if ($auth->authenticate()) {
-                        Router::redirect("saludo");                      
+                        $usuarios= new Usuarios();
+                        $user=$usuarios->consultarUsuario($usuario->correo);
+                        Router::redirect("saludo/index/$user->id");                      
                     } else {
                         Flash::error("Usuario no disponible en la base de datos");
                     }

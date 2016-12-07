@@ -21,6 +21,20 @@ class Usuarios extends ActiveRecord{
          
          
     }
+    public function consultarUsuario($correo){
+        $usuarios= new Usuarios();
+        return $this->usuario = $usuarios->find_by_sql("SELECT id
+               FROM usuarios                
+               WHERE correo='$correo'");
+    
+    }
+    public function consultarNombres($id){
+        $usuarios= new Usuarios();
+        return $this->usuario = $usuarios->find_by_sql("SELECT nombre,apellido
+               FROM usuarios                
+               WHERE id='$id'");
+    
+    }
     	
   }
 
