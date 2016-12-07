@@ -24,8 +24,7 @@ class IndexController extends AppController
                 $user=$usuarios->consultarUsuario($correo);
                 Router::redirect("saludo/index/$user->id");                 
             } else {
-                Flash::error("Usuario o contraseña incorrectos");
-               
+               Flash::error('<font color="red">Usuario no disponible en la base de datos</font>');
             }
         }
     

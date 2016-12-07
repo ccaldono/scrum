@@ -3,7 +3,7 @@
     padding: 0px;
 }
 body{
-    background-color: #fdfdfd;
+    background-color: #337ab7;
     font-family: Arial, Helvetica;
 }
 #head {
@@ -16,7 +16,7 @@ body{
     padding: 10px 8px 15px;
     margin: 0;
     float: left;
-    color: #fff;
+    color: V;
 }
 .app {
     font-size: 30px;
@@ -61,7 +61,7 @@ body{
 }
 #footer p{
     font-size: 14px;
-    color: #d1a88b;
+    color:#337ab7;
 }
 #footer ul.links {
     text-align: center;

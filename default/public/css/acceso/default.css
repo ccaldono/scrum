@@ -1528,10 +1528,10 @@ body
 {
 	margin: 0;
 	padding: 0;
-	background: #2F2F2F url(images/bg02.jpg) repeat;
+	background: #365e84 url(images/bg02.jpg) repeat;
 	font-family: 'Source Sans Pro', sans-serif;
 	font-size: 12pt;
-	color: #5B5B5B;
+	color: #365e84;
 }
 
 h1, h2, h3
@@ -1540,7 +1540,7 @@ h1, h2, h3
 	padding: 0;
 	font-weight: normal;
 	font-weight: 700;
-	color: #222222;
+	color: #365e84;
 }
 
 h1
@@ -1574,7 +1574,7 @@ strong
 
 a
 {
-	color: #222222;
+	color: #365e84;
 }
 
 a:hover
@@ -1640,7 +1640,7 @@ hr
 	text-transform: uppercase;
 	font-weight: 400;
 	font-size: 0.90em;
-	color: #8E8E8E;
+	color: #365e84;
 }
 
 ul.style1
@@ -1654,7 +1654,7 @@ ul.style1 li
 {
 	clear: both;
 	padding: 1.20em 0em;
-	border-top: 1px solid #DBDBDB;
+	border-top: 1px solid #365e84;
 }
 
 ul.style1 .first
@@ -1706,7 +1706,7 @@ ul.contact li span
 
 ul.contact li a
 {
-	color: #FFF;
+	color: #365e84;
 }
 
 ul.contact li a:before
@@ -1722,17 +1722,17 @@ ul.contact li a:before
 
 ul.contact li a.icon-twitter:before
 {
-	background: #2DAAE4;
+	background: #365e84;
 }
 
 ul.contact li a.icon-facebook:before
 {
-	background: #39599F;
+	background: #365e84;
 }
 
 ul.contact li a.icon-dribbble:before
 {
-	background: #C4376B;
+	background: #365e84;
 }
 
 ul.contact li a.icon-tumblr:before
@@ -1750,7 +1750,7 @@ ul.contact li a.icon-rss:before
 	display: inline-block;
 	margin-top: 2em;
 	padding: 1em 3em;
-	background: #C4376B;
+	background: #365e84;
 	border-radius: 7px;
 	-moz-transition: opacity 0.25s ease-in-out;
 	-webkit-transition: opacity 0.25s ease-in-out;
